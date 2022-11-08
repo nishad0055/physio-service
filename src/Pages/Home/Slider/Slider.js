@@ -34,13 +34,13 @@ const Slider = () => {
     >
       <Overlay>
         <div className="Wrapper">
-           <h1 className="title">
+           <h1 className="title md:text-5xl text-3xl font-bold">
              Transform Your Mindset & Achieve Your Goals
            </h1>
-           <h2 className='subtitle' >
+           <h2 className='subtitle md:text-3xl text-xl' >
               Amazing Therapies and advice to help you achieve your goals and taking important decision for your life.
            </h2>
-           <button className='bt btn btn-warning' >Book Now</button>
+           <button className='bt btn btn-warning text-xl md:w-[15%]' >Appoinment</button>
 
         </div>
       </Overlay>
