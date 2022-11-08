@@ -1,8 +1,23 @@
-import React from 'react';
-import {AiOutlineMail} from 'react-icons/ai'
+import React, { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+
 
 const Navbar = () => {
+    
+     const {user, logOut} = useContext(AuthContext)
+
+     const handleLogOut = () =>{
+        
+     logOut()
+    .then(()=>{
+      
+    })
+    .catch(e=> console.error(e))
+       
+     }
+  
     return (
         <div>
             
@@ -15,7 +30,16 @@ const Navbar = () => {
                    
                     <div className="flex items-center">
                         
-                         <Link to='/login' className="text-md font-bold text-blue-600  hover:underline">Login</Link>
+                         
+                        {
+                          user?.uid ?
+                          <>
+                            <button onClick={handleLogOut} >SignOut</button>
+                          </>:
+                          <Link to='/login' className="text-md font-bold text-blue-600  hover:underline">Login</Link>
+                        }
+
+                       
                     </div>
                 </div>
             </nav>

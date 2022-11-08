@@ -5,14 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDH_od4_EKAj_P9KW7xs6IAbWxRzZbY2qQ",
-  authDomain: "physcare-8c35c.firebaseapp.com",
-  projectId: "physcare-8c35c",
-  storageBucket: "physcare-8c35c.appspot.com",
-  messagingSenderId: "779472803248",
-  appId: "1:779472803248:web:3df9d861bec0c9f26c7275"
+  apiKey: "AIzaSyDwHtvEYXwqeFKitxwrgNJv2eo3fpnytpw",
+  authDomain: "psycare-auth.firebaseapp.com",
+  projectId: "psycare-auth",
+  storageBucket: "psycare-auth.appspot.com",
+  messagingSenderId: "867324419656",
+  appId: "1:867324419656:web:9103b7693776155ebe427d"
 };
 
 // Initialize Firebase
- const app = initializeApp(firebaseConfig);
- export default app;
+const app = initializeApp(firebaseConfig);
+export default app;
