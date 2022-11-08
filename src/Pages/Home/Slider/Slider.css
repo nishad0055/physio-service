@@ -14,19 +14,19 @@
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
-  width: 90%;
+  width: 80%;
   text-align: center;
   font-size: 3.5rem;
   }
   .subtitle{
-    margin: 24px auto 0;
+    margin: 16px auto 0;
   padding: 0;
-  width: 80%;
+  width: 70%;
   text-align: center;
   font-size: 1.75rem;
   }
   .bt{
-    margin: 24px auto 0;
+    margin: 8px auto 0;
   padding: 0;
   width: 15%;
   text-align: center;

@@ -14,7 +14,7 @@ const Slider = () => {
         <div>
             
             <HeroSlider
-      height={"100vh"}
+      height={"90vh"}
       autoplay
       controller={{
         initialSlide: 1,
@@ -35,10 +35,10 @@ const Slider = () => {
       <Overlay>
         <div className="Wrapper">
            <h1 className="title">
-             Largest Phisiologist Service
+             Transform Your Mindset & Achieve Your Goals
            </h1>
            <h2 className='subtitle' >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Amazing Therapies and advice to help you achieve your goals and taking important decision for your life.
            </h2>
            <button className='bt btn btn-warning' >Book Now</button>
 
