@@ -19,7 +19,7 @@ const ServiceArea = () => {
             <h1 className='md:text-5xl text-2xl font-bold' >Therapies & Treatments</h1>
           <hr className='w-[10%] h-[3px] bg-gray-500 my-3 mx-auto' />
             </div>
-            <div className='md:grid grid-cols-3 gap-5 my-8'>
+            <div className='md:grid grid-cols-3 gap-3 my-8'>
                 {
                    services.map(service=> <ServiceCard 
                     key={service._id}
