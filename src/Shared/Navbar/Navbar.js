@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import {FaUser} from 'react-icons/fa'
+import avator  from '../../assets/account/avator.png'
 
 
 const Navbar = () => {
@@ -37,7 +39,11 @@ const Navbar = () => {
                             <div class="dropdown dropdown-end">
                             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                               <div class="w-8 rounded-full">
-                                <img src={user?.photoURL} />
+                                {
+                                  user?.photoURL?
+                                  <img src={user?.photoURL} />:
+                                  <img src={avator} alt="" />
+                                }
                               </div>
                             </label>
                             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -46,7 +52,7 @@ const Navbar = () => {
                                  My reviews
                                 </Link>
                               </li>
-                              <li><a>Settings</a></li>
+                              <li><Link to='/add/services' >Add Service</Link></li>
                               <li><Link onClick={handleLogOut} >Logout</Link> </li>
                             </ul>
                           </div>
