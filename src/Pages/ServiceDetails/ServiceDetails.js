@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import ShowReview from '../ShowReview/ShowReview';
 
 
 const ServiceDetails = () => {
      const {_id, image, name , description, price} = useLoaderData()
      const {user} = useContext(AuthContext)
      const navigate = useNavigate();
+     const[reviews, setReviews]= useState([])
+
+     useEffect(()=>{
+             fetch(`http://localhost:5000/reviews?service=${_id}`)
+             .then(res=>res.json())
+             .then(data=> setReviews(data))
+     },[])
+     console.log(reviews)
       
      const handleReview = (event) =>{
         event.preventDefault();
@@ -52,14 +61,19 @@ const ServiceDetails = () => {
                  </div>
                   <button className='btn btn-outline btn-primary' >Book Appointment</button>
              </div>
-             
-             
+           
              <div>
-
+                 <h2 className='text-xl font-bold my-5 bg-base-200  w-1/4' >Service Reviews</h2>
+                  {
+                    reviews.map(rv => <ShowReview
+                     key={rv._id}
+                     rv={rv}
+                    ></ShowReview>)
+                  }  
              </div>
 
              <div>
-                 <h2 className='text-3xl my-3' >Add a review</h2>
+                 <h2 className='text-xl mt-5' >Add a review</h2>
                  <form  onSubmit={handleReview} >
                  <span className="label-text">What is your name?</span><br />
                  <input name='name' type="text" placeholder="Type your full name" className="input input-bordered w-full max-w-xs my-2" /><br />

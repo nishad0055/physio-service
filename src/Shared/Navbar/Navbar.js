@@ -34,10 +34,26 @@ const Navbar = () => {
                         {
                           user?.uid ?
                           <>
-                            <button onClick={handleLogOut} >SignOut</button>
+                            <div class="dropdown dropdown-end">
+                            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                              <div class="w-8 rounded-full">
+                                <img src={user?.photoURL} />
+                              </div>
+                            </label>
+                            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                              <li>
+                                <Link to='/myreviews' class="justify-between">
+                                 My reviews
+                                </Link>
+                              </li>
+                              <li><a>Settings</a></li>
+                              <li><Link onClick={handleLogOut} >Logout</Link> </li>
+                            </ul>
+                          </div>
                           </>:
                           <Link to='/login' className="text-md font-bold text-blue-600  hover:underline">Login</Link>
                         }
+                        
 
                        
                     </div>
