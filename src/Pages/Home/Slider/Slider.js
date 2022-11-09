@@ -4,10 +4,10 @@ import './Slider.css'
 
 
 
-const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
-const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
-const craterRock = "https://i.imgur.com/8DYumaY.jpg";
-const giauPass = "https://i.imgur.com/8IuucQZ.jpg";
+import bogliasco from '../../../assets/about/cphysio.jpeg'
+import countyClare from '../../../assets/about/doctor.jpg'
+import craterRock from '../../../assets/about/physio.jpg'
+import giauPass  from '../../../assets/about/doctor2.jpg'
 
 const Slider = () => {
     return (
