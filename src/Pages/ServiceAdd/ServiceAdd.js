@@ -14,7 +14,7 @@ const ServiceAdd = () => {
         description: event.target.description.value,
       }
 
-      fetch('http://localhost:5000/services',{
+      fetch('http://localhost:5000/service',{
         
         method: 'POST',
         headers:{

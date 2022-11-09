@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ShowReview from '../ShowReview/ShowReview';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ServiceDetails = () => {
@@ -43,7 +45,16 @@ const ServiceDetails = () => {
          .then(data =>{
             console.log(data)
             if(data.acknowledged >0){
-                alert('review added succussfull')
+                toast('Review Added Successfully',{
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                  })
             }
             event.target.reset()
          })
@@ -90,7 +101,18 @@ const ServiceDetails = () => {
                        
                         <input className='btn btn-primary' type="submit" value="Add Review" />:
 
-                    
+                        <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                />
                  </form>
              </div>
 
