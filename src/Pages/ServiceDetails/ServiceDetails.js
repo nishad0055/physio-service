@@ -25,6 +25,7 @@ const ServiceDetails = () => {
 
          const review = {
               service: _id,
+              serviceName:name,
               name:event.target.name.value,
               email: user?.email || 'No email found',
               img: user?.photoURL,
@@ -62,8 +63,8 @@ const ServiceDetails = () => {
                   <button className='btn btn-outline btn-primary' >Book Appointment</button>
              </div>
            
-             <div>
-                 <h2 className='text-xl font-bold my-5 bg-base-200  w-1/4' >Service Reviews</h2>
+             <div className='md:my-20 my-10'>
+                 <h2 className='text-xl font-bold bg-base-200 my-3 w-1/4' >Service Reviews</h2>
                   {
                     reviews.map(rv => <ShowReview
                      key={rv._id}
@@ -72,7 +73,7 @@ const ServiceDetails = () => {
                   }  
              </div>
 
-             <div>
+             <div className='md:my-20 my-10'>
                  <h2 className='text-xl mt-5' >Add a review</h2>
                  <form  onSubmit={handleReview} >
                  <span className="label-text">What is your name?</span><br />
