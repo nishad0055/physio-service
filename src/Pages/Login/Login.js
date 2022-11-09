@@ -73,6 +73,7 @@ const Login = () => {
                     
                 </form>
                 <p className='text-gray-700'>Are You New User? Please <Link className='text-blue-900 text-md font-semibold' to='/signup'>Login</Link> </p>
+                <div className="divider w-full max-w-xs">OR</div>
                 <div>
                 <button onClick={handleGoogle}  className="btn btn-outline btn-primary w-full max-w-xs my-3">Continue with Google</button>
                 </div>

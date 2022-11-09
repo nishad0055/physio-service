@@ -53,6 +53,7 @@ const Signup = () => {
                      <input type="submit" className='btn btn-primary w-full max-w-xs my-3' value="Sign Up" />
                  </form>
                  <p className='text-gray-700'>Already Have an Account? <Link className='text-blue-900 text-md font-semibold' to='/login'>Login</Link> </p>
+                 <div className="divider w-full max-w-xs">OR</div>
                  <div>
                  <button onClick={handleGoogle} className="btn btn-outline btn-primary w-full max-w-xs my-3">Continue with Google</button>
                  </div>

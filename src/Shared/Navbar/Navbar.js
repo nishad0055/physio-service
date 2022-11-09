@@ -78,7 +78,7 @@ const Navbar = () => {
         
       </ul>
     </div>
-    <Link to='/' className="btn btn-ghost normal-case text-xl text-white">Physcare</Link>
+    <Link to='/' className="btn btn-ghost normal-case text-xl text-white">PHYSCARE</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0 text-white">
@@ -88,7 +88,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link className="btn btn-outline btn-warning">Make an Appointment</Link>
+    <Link className="btn btn-outline btn-warning">Book Online</Link>
   </div>
 </div>
  </div>
