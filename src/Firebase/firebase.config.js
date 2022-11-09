@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDwHtvEYXwqeFKitxwrgNJv2eo3fpnytpw",
-  authDomain: "psycare-auth.firebaseapp.com",
-  projectId: "psycare-auth",
-  storageBucket: "psycare-auth.appspot.com",
-  messagingSenderId: "867324419656",
-  appId: "1:867324419656:web:9103b7693776155ebe427d"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
