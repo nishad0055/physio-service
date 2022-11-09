@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ShowReview from '../ShowReview/ShowReview';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 
 const ServiceDetails = () => {
@@ -11,6 +12,7 @@ const ServiceDetails = () => {
      const {user} = useContext(AuthContext)
      const navigate = useNavigate();
      const[reviews, setReviews]= useState([])
+     useTitle('Service-details')
 
      useEffect(()=>{
              fetch(`http://localhost:5000/reviews?service=${_id}`)

@@ -2,11 +2,13 @@ import React, { useEffect, useState,} from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AllServiceCard from './AllServiceCard/AllServiceCard';
 import FadeLoader from "react-spinners/FadeLoader";
+import useTitle from '../../hooks/useTitle';
 
 const AllServices = () => {
     
     const allservices = useLoaderData()
      const [loading ,setLoading] = useState(false)
+     useTitle('Physiotherapy services')
      useEffect(()=>{
          setLoading(true)
          setTimeout(()=>{

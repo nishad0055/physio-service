@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/account/login.jpg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import FadeLoader from "react-spinners/FadeLoader";
+import useTitle from '../../hooks/useTitle';
 
 
 const Login = () => {
@@ -12,7 +13,7 @@ const Login = () => {
      const {createSignIn , googleSignIn} = useContext(AuthContext)
      const provider = new GoogleAuthProvider()
      const navigate = useNavigate()
-
+     useTitle('login')
     const [loading, setLoading] = useState(false)
     useEffect(()=>{
         setLoading(true)

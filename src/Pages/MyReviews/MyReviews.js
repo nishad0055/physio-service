@@ -3,11 +3,12 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewTable from './ReviewTable/ReviewTable';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 const MyReviews = () => {
     const {user} = useContext(AuthContext)
     const [myreveiws, setMyreviews] = useState([])
-
+     useTitle('MyReview')
     const handleDelete =(_id) =>{
         const agree = window.confirm("Are you sure want to delete");
         if(agree){
