@@ -15,7 +15,7 @@ const AboutMe = () => {
       <h1 className="md:text-4xl text-3xl font-bold font-mono my-4">I'm Doctor Andy Smith- <br /> Expert <span className='md:text-4xl font-thin' >Physiologist</span> from New York.</h1>
       <p className="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
       
-      <button className="btn btn-warning">Get More Info</button>
+      <button className="btn  btn-primary">Get More Info</button>
     </div>
   </div>
         </div>

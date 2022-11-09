@@ -13,7 +13,7 @@ const ServiceArea = () => {
     },[])
 
     return (
-        <div className='container mx-auto my-4'>
+        <div className='container mx-auto my-4 bg-base-100'>
             <div className='text-center'>
             <h2 className='md:text-2xl font-semibold text-gray-700' >What I offer</h2> 
             <h1 className='md:text-5xl text-2xl font-bold' >Therapies & Treatments</h1>
@@ -28,7 +28,7 @@ const ServiceArea = () => {
                 }
             </div>
               <div className='items-center text-center' >
-               <Link to='/services' ><button className="btn btn-wide btn-warning">View All Service</button></Link>
+               <Link to='/services' ><button className="btn btn-outline btn-primary">View All Service</button></Link>
               </div>
         </div>
     );
