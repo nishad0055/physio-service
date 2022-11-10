@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../assets/account/login.jpg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import FadeLoader from "react-spinners/FadeLoader";
+
 import useTitle from '../../hooks/useTitle';
 
 
@@ -33,24 +33,9 @@ const Login = () => {
                  </div>
                  </>
             }
-            const currentUser = {
-                email: user.email
-            }
-            console.log(currentUser)
+             
+            navigate('/')
             
-            fetch('http://localhost:5000/jwt', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(currentUser)
-            })  
-            .then(res => res.json())
-            .then(data => {
-                console.log(data )
-                localStorage.setItem('token', data.token)
-                navigate(from , {replace:true})
-            })
             form.reset();
             
         })

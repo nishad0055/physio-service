@@ -16,7 +16,7 @@ const ServiceAdd = () => {
         description: event.target.description.value,
       }
 
-      fetch('http://localhost:5000/service',{
+      fetch('https://assignment-eleven-server-zeta.vercel.app/service',{
         
         method: 'POST',
         headers:{

@@ -12,7 +12,7 @@ const MyReviews = () => {
     const handleDelete =(_id) =>{
         const agree = window.confirm("Are you sure want to delete");
         if(agree){
-            fetch(`http://localhost:5000/reviews/${_id}`,{
+            fetch(`https://assignment-eleven-server-zeta.vercel.app/reviews/${_id}`,{
                 method: 'DELETE',
                
             })
@@ -38,15 +38,8 @@ const MyReviews = () => {
   }
     
     useEffect(()=>{
-           fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
-            headers:{
-                authorization: `Bearer ${localStorage.getItem('token')}`
-            }
-             
-           })
-           .then(res=> {
-             return res.json()
-           })
+           fetch(`https://assignment-eleven-server-zeta.vercel.app/reviews?email=${user?.email}`)
+           .then(res=>res.json())
            .then(data=> setMyreviews(data))
     }, [user?.email])
 

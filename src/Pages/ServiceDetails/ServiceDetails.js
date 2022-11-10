@@ -15,7 +15,7 @@ const ServiceDetails = () => {
      useTitle('Service-details')
 
      useEffect(()=>{
-             fetch(`http://localhost:5000/reviews?service=${_id}`)
+             fetch(`https://assignment-eleven-server-zeta.vercel.app/reviews?service=${_id}`)
              .then(res=>res.json())
              .then(data=> setReviews(data))
      },[])
@@ -37,7 +37,7 @@ const ServiceDetails = () => {
               ratings:event.target.option.value,
               feedback:event.target.message.value,
          }
-         fetch('http://localhost:5000/reviews',{
+         fetch('https://assignment-eleven-server-zeta.vercel.app/reviews',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
