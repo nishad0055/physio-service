@@ -8,7 +8,7 @@ import useTitle from '../../hooks/useTitle';
 
 const Signup = () => {
     
-     const {createUser, googleSignIn} = useContext(AuthContext)
+     const {createUser, googleSignIn,loading} = useContext(AuthContext)
      const provider = new GoogleAuthProvider();
     useTitle('signup')
     const handleSignUp = (event) =>{
@@ -16,12 +16,19 @@ const Signup = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log( email, password)
+      
 
        createUser(email, password)
        .then(result =>{
         const user = result.user;
         console.log(user)
+        if(loading){
+            return <>
+            <div class="flex items-center justify-center ">
+                <div class="w-24 h-24 border-l-2 border-gray-900 rounded-full animate-spin"></div>
+             </div>
+             </>
+        }
        })
        .catch(error=> console.error(error))
       
@@ -33,6 +40,13 @@ const Signup = () => {
         .then(result=> {
             const user = result.user;
             console.log(user)
+            if(loading){
+                return <>
+                <div class="flex items-center justify-center ">
+                    <div class="w-24 h-24 border-l-2 border-gray-900 rounded-full animate-spin"></div>
+                 </div>
+                 </>
+            }
         })
         .catch(e=> console.error(e))
     

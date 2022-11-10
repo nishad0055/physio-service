@@ -41,7 +41,7 @@ const Navbar = () => {
                               <div class="w-8 rounded-full">
                                 {
                                   user?.photoURL?
-                                  <img src={user?.photoURL} />:
+                                  <img src= {user?.photoURL} alt="loding"/>:
                                   <img src={avator} alt="" />
                                 }
                               </div>

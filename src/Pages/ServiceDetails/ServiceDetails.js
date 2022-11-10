@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ShowReview from '../ShowReview/ShowReview';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,8 +9,8 @@ import useTitle from '../../hooks/useTitle';
 
 const ServiceDetails = () => {
      const {_id, image, name , description, price} = useLoaderData()
+     const [error, setError] = useState(false)
      const {user} = useContext(AuthContext)
-     const navigate = useNavigate();
      const[reviews, setReviews]= useState([])
      useTitle('Service-details')
 
@@ -24,7 +24,8 @@ const ServiceDetails = () => {
      const handleReview = (event) =>{
         event.preventDefault();
         if(!user){
-           return navigate('/login')
+           setError( <p className='text-red-600 my-2' >Please login add review <Link className='text-blue-600' to='/login'>Login Now</Link> </p> )
+           return
         }
 
          const review = {
@@ -100,9 +101,9 @@ const ServiceDetails = () => {
                     <option value="3">3</option>
                 </select><br />
                     
-                       
-                        <input className='btn btn-primary' type="submit" value="Add Review" />:
-
+                    {error}
+                        
+                        <input className='btn btn-primary' type="submit" value="Add Review" />
                         <ToastContainer
                 position="top-center"
                 autoClose={5000}
