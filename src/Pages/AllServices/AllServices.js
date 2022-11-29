@@ -28,7 +28,7 @@ const AllServices = () => {
                     size={100}
                     />
                 :
-              <div className='md:grid grid-cols-3 gap-3' >
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-3' >
                 {
                    allservices.map(service=> <AllServiceCard
                    key={service._id}

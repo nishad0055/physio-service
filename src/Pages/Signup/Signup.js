@@ -6,6 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 
+
 const Signup = () => {
     
      const {createUser, googleSignIn,loading} = useContext(AuthContext)

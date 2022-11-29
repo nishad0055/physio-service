@@ -1,0 +1,9 @@
+.overlay {
+    background: linear-gradient(rgba(9, 24, 235, 0.849), rgba(23, 31, 41, 0.8)),url('../../../assets/about/26.jpg')
+}
+.purple {
+    filter: invert(5%) sepia(78%) saturate(6858%) hue-rotate(276deg) brightness(97%) contrast(101%);
+}
+.w-14{
+    filter: invert(10);
+}

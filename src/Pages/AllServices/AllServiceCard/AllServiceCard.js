@@ -9,7 +9,7 @@ const AllServiceCard = ({service}) => {
         <div>
             <PhotoProvider>
                
-            <div className="card w-96 h-full bg-base-100 shadow-xl">
+            <div className="card w-full h-full bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     
                   <PhotoView src={image} >

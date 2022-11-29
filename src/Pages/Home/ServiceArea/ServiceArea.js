@@ -4,6 +4,7 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 
 
 const ServiceArea = () => {
+
    
     const [services, setServices] = useState([])
     useEffect(()=>{
@@ -15,11 +16,11 @@ const ServiceArea = () => {
     return (
         <div className='container mx-auto my-4 bg-base-100'>
             <div className='text-center'>
-            <h2 className='md:text-2xl font-semibold text-gray-700' >What I offer</h2> 
-            <h1 className='md:text-5xl text-2xl font-bold' >Therapies & Treatments</h1>
+            <h2 className='md:text-2xl font-semibold text-[#19D3AE] font-sans'  >What I offer</h2> 
+            <h1 className='md:text-5xl text-2xl text-primary font-bold font-sans' >THERAPHIES & TREATMENT</h1>
           <hr className='w-[10%] h-[3px] bg-gray-500 my-3 mx-auto' />
             </div>
-            <div className='md:grid grid-cols-3 gap-3 my-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-3 my-8' >
                 {
                    services.map(service=> <ServiceCard 
                     key={service._id}

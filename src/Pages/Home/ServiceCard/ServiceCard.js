@@ -1,17 +1,27 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import 'react-photo-view/dist/react-photo-view.css';
 import {  PhotoProvider, PhotoView } from 'react-photo-view';
 
+import { useEffect } from 'react';
+
 const ServiceCard = ({service}) => {
-    const {name, price, image,description ,_id} = service
+    const {name, price, image,description ,_id} = service;
+   
+  
     return (
         <div>
              <PhotoProvider>
-             <div className="card w-96 bg-base-100 shadow-xl">
+             <div className="card h-full w-full bg-base-100 shadow-md" data-aos="fade-down"
+             data-aos-easing="linear"
+                 data-aos-duration="1500" >
                 <figure className="px-10 pt-10">
                  <PhotoView src={image} >
-                 <img src= {image} alt="/" className="rounded-xl cursor-pointer" />
+                 
+                 <img src= {image} alt="/" className=" rounded-xl cursor-pointer" />
+              
+                 
+                 
                  </PhotoView>
                 </figure>
                 <div className="card-body items-center text-center">
