@@ -20,6 +20,7 @@
 - toastify
 - react-icons
 - react-spinner
-### Live-Link: https://psycare-auth.web.app/
+
+### Project-live-link: https://psycare-auth.web.app/
 
 
